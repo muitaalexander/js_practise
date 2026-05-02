@@ -42,3 +42,31 @@ randomBtn.onclick = function(){
   label2.textContent = `random number 2: ${randomNum2}`;
   label3.textContent = `random number 3: ${randomNum3}`;
 }
+
+//If statements i.e in age.
+
+const myAge = document.getElementById("myAge");
+const ageBtn = document.getElementById("ageBtn");
+const myText = document.getElementById("myText");
+let age;
+
+ageBtn.onclick = function(){
+       age = myAge.value;
+       age = Number(age);
+
+       if(age == ""){
+              myText.textContent = `Enter Your age`;
+       }
+       else if(age >= 100){
+              myText.textContent = `You are too old to enter`;
+       }
+       else if(age >= 18){
+              myText.textContent = `You are Old enough to enter`;
+       }
+       else if(age < 0){
+              myText.textContent = `Enter a valid age`;
+       }
+       else{
+              myText.textContent =`You must 18+ yeays old to enter`
+       }
+}
