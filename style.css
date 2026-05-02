@@ -1,3 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    background-color: rgb(146, 212, 212);
+    padding: 10px;
+}
+/*-- counting by increasing and decreasing.--*/
 #countLabel{
     display: block;
     text-align: center;
@@ -20,3 +32,16 @@
 .buttons:hover{
     background-color:hsl(199, 65%, 45%) ;
 }
+
+/* generating random numbers*/
+#randomBtn{
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.labels{
+    color: hsl(240, 61%, 49%);
+    font-size: 1.2em;
+    display: block;
+}
+
