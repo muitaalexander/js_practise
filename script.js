@@ -70,3 +70,36 @@ ageBtn.onclick = function(){
               myText.textContent =`You must 18+ yeays old to enter`
        }
 }
+
+//checked property in checkbox, and radio buttons elements
+
+const betaSquad = document.getElementById("betaSquad");
+const sideMen = document.getElementById("sideMen");
+const mrBeast = document.getElementById("mrBeast");
+const subscBox = document.getElementById("subscBox");
+const checkBtn = document.getElementById("checkBtn");
+const checkText = document.getElementById("checkText");
+const subsText = document.getElementById("subsText");
+
+checkBtn.onclick = function(){
+       if(betaSquad.checked){
+             checkText.textContent = `You selected Beta Squad`;
+       }
+       else if(sideMen.checked){
+             checkText.textContent = `You selected Side Men`;
+       }
+       else if(mrBeast.checked){
+             checkText.textContent = `You selected Mr. Beast`;
+       }
+       else{
+              checkText.textContent = `You did not select any`;
+       }
+       
+       if(subscBox.checked){
+              subsText.textContent = `You are Subscribed`;
+       }
+       else{
+               subsText.textContent = `You are Not Subscribed`;
+       }
+
+}
