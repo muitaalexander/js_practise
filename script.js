@@ -95,6 +95,7 @@ checkBtn.onclick = function(){
               checkText.textContent = `You did not select any`;
        }
        
+       
        if(subscBox.checked){
               subsText.textContent = `You are Subscribed`;
        }
@@ -103,3 +104,150 @@ checkBtn.onclick = function(){
        }
 
 }
+
+
+/*
+//ternary operator
+
+let isStudent = false;
+let message = isStudent ? "you are a student":"you are not a student";
+console.log(message);
+
+
+let purchaseAmount = 125;
+let discount = purchaseAmount >= 100 ?10 : 0 ;
+console.log (`your total amount is $${purchaseAmount - purchaseAmount*(discount/100)}`);
+*/
+
+
+
+/*
+//Switches
+
+let testScore = 190;
+let gradeScore;
+
+switch(true){
+       case testScore >= 90:
+            gradeScore ="A";
+            break;
+       case testScore >= 70:
+             gradeScore= "B";
+             break;
+       case testScore >= 50:
+            gradeScore = "C";
+            break;
+       case testScore < 50 :
+            gradeScore = "D";
+            break;
+}
+ console.log(gradeScore);
+*/
+
+
+
+/*
+ //string slicing
+const email = "muitaalexander@gmail.com";
+
+ let username = email.slice(0, email.indexOf("@"));
+ let extra = email.slice(email.indexOf("@")+1);
+
+ console.log(username);
+ console.log(extra);
+*/
+
+
+/*
+//method chaining
+
+ let usersame = window.prompt("Enter your username: ");
+ usersame = usersame.trim().charAt(0).toUpperCase() + usersame.trim().slice(1).toLowerCase();
+ console.log(usersame);
+ */
+
+
+
+ //while
+ //do while
+ //for
+ //break
+ //continue
+
+ //A NUMBER GUESSING GAME
+/*
+ let min_num = 1;
+ let max_num = 100;
+ let answer = Math.floor(Math.random() * (max_num)) + min_num;
+
+ let attempts = 0;
+ let guess;
+ let running = true;
+ console.log(answer);
+
+ while(running){
+       guess = window.prompt(`guess the number between ${min_num} - ${max_num}`);
+       guess = Number(guess);
+
+       if(isNaN(guess)){
+              window.alert("enter a valid number");
+       }
+       else if(guess < min_num || guess >  max_num){
+              window.alert(`Number must be between ${min_num}- ${max_num}`);
+       }
+       else {
+              attempts++;
+              if(guess < answer){
+                     Window.alert("TOO LOW! Attempt again!");
+              }
+              else if(guess > answer){
+                     Window.alert("TOO HIGH! Attempt again!");
+              }
+              else{
+                     Window.alert(`CORRECT! the answer is ${answer}, after ${attempts} attempts`);
+                     running = false;
+              }
+       }
+       
+ }
+*/
+//FUNCTIONS
+
+function multiply(x, y){
+       return x * y;
+}
+       console.log(multiply(2, 3));
+
+       
+function isEven(number){
+       return number %2 === 0 ? true: false;
+}
+console.log(isEven(30));
+
+
+function numValid(telephone){
+       if(telephone.includes("254")){
+              return true;
+       }
+       else{
+              return false
+       }
+}
+console.log(numValid("2547767"));
+
+/*
+function emailValid(email){
+       if(email.includes("@gmail.com") || email.includes("@outlook.com")){
+              return true;
+       }
+       else{
+              return false;
+       }
+}
+console.log(emailValid("muitaalexander@outlook.com"))
+*/
+//simpler of above
+function emailValid(email){
+       return email.includes("@gmail.com")|| email.includes("@outlook.com") ? true : false;
+}
+console.log(emailValid("alex@outlook.com"));
